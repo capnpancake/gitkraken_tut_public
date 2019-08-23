@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script>
+            $(function(){
+                $("#btn").click(function(){
+                    var text = $("#txt").val();
+                    var bool = false;
+                    for (let i = 0; i < text.length; i++){
+                        if (text[i] == text[i+1]){
+                            bool = true;
+                            break;
+                        }
+                    }
+
+                    if (bool){
+                        alert("Contains identical consecutive letters");
+                    } else {
+                        alert("Does not contain identical consecutive letters")
+                    }
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <input type="text" id="txt" placeholder="Your word here...">
+        <input type="button" id="btn" value="Check for Double Letters">
+    </body>
+</html>
